@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(https://freebiesdesign.com/wp-content/uploads/2017/09/Game-Nature-Background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.header {
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: greenyellow;
+    font-family: cursive;
+    letter-spacing: 1px;
+    font-weight: 1000;
+    font-size: 3rem;
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.board {
+    transition: all 0.3s linear;
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+    align-items: center;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+.row {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.3rem;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px 2px rgba(165, 163, 163, 0.4);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+}
+
+.blocks {
+    width: 30%;
+    padding: 1rem;
+    margin: 0.3rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chartreuse;
+    opacity: 0.5;
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: blueviolet;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+}
+
+.blocks:hover {
+    transition: all 0.3s linear;
+    background-color: black;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+.options>h1 {
+    width: 60%;
+    height: 100%;
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color: red;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blinkResult {
+    animation: blink 0.5s linear infinite;
+}
+
+.options>.reset {
+    height: 100%;
+    width: auto;
+    padding: 1rem;
+    background-color: red;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+.options>.reset:hover {
+    transition: all 0.3s linear;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: red;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+@keyframes blink {
+    from {
+        color: blue;
+        background-color: red;
+        opacity: 0.3;
+    }
+    to {
+        color: rgb(15, 15, 12);
+        background-color: transparent;
+        opacity: 1;
+    }
+}
+
+@media (max-width:426px) {
+    .container {
+        justify-content: space-around;
+        max-height: 100vh;
+        max-width: 100vw;
+    }
+    .board {
+        width: 100vw;
+    }
+    .box {
+        width: 100vw;
+        height: 40vh;
+        margin: 1rem;
+    }
+    .options {
+        height: 25vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .options>h1 {
+        width: 100%;
+        height: 75%;
+        font-weight: 1000;
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    .options>.reset {
+        height: 25%;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */

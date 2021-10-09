@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC TIC TAC TOE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="container">
+
+        <div class="header">
+            Tic Tac Toe
+        </div>
+        <!-- game-board  -->
+
+        <!--    00 | 01 | 02    -->
+        <!--    -- | -- | --    -->
+        <!--    10 | 11 | 12    -->
+        <!--    -- | -- | --    -->
+        <!--    20 | 21 | 22    -->
+
+        <div class="board" id="board">
+
+            <!-- row-1 -->
+            <div class="row">
+                <div class="blocks" onclick="setBlock([0,0]);"></div>
+
+                <div class="blocks" onclick="setBlock([0,1]);"></div>
+
+                <div class="blocks" onclick="setBlock([0,2]);"></div>
+            </div>
+
+            <!-- row-2 -->
+            <div class="row">
+                <div class="blocks" onclick="setBlock([1,0]);"></div>
+
+                <div class="blocks" onclick="setBlock([1,1]);"></div>
+
+                <div class="blocks" onclick="setBlock([1,2]);"></div>
+            </div>
+
+            <!-- row-3 -->
+            <div class="row">
+
+                <div class="blocks" onclick="setBlock([2,0]);"></div>
+
+                <div class="blocks" onclick="setBlock([2,1]);"></div>
+
+                <div class="blocks" onclick="setBlock([2,2]);"></div>
+            </div>
+        </div>
+        <div class="options">
+            <h1 id="res"></h1>
+            <button type="reset" class="reset" onclick="resetBoard();">RESET</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
